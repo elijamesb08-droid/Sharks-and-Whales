@@ -1,0 +1,455 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Explore | Abyssal Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#333535",
+                        "on-secondary": "#1e314c",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-background": "#e2e2e2",
+                        "on-secondary-container": "#a3b6d8",
+                        "primary-fixed": "#d6e3ff",
+                        "secondary": "#b5c7ea",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#333535",
+                        "surface-container-high": "#282a2b",
+                        "primary-fixed-dim": "#b9c7e4",
+                        "on-tertiary-container": "#00937a",
+                        "outline-variant": "#44474d",
+                        "surface-container": "#1e2020",
+                        "surface-dim": "#121414",
+                        "tertiary-fixed-dim": "#38debb",
+                        "background": "#121414",
+                        "surface-bright": "#37393a",
+                        "on-tertiary-fixed-variant": "#005142",
+                        "surface": "#121414",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#0a192f",
+                        "on-surface": "#e2e2e2",
+                        "inverse-surface": "#e2e2e2",
+                        "tertiary-fixed": "#5ffbd6",
+                        "tertiary-container": "#001e17",
+                        "secondary-fixed-dim": "#b5c7ea",
+                        "on-primary-fixed": "#0d1c32",
+                        "inverse-on-surface": "#2f3131",
+                        "surface-container-low": "#1a1c1c",
+                        "secondary-container": "#354764",
+                        "on-secondary-fixed": "#071c36",
+                        "on-secondary-fixed-variant": "#354764",
+                        "surface-tint": "#b9c7e4",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-tertiary": "#00382d",
+                        "on-error": "#690005",
+                        "inverse-primary": "#515f78",
+                        "primary": "#b9c7e4",
+                        "on-tertiary-fixed": "#002019",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#74829d",
+                        "tertiary": "#38debb",
+                        "outline": "#8f9097",
+                        "on-surface-variant": "#c5c6cd",
+                        "on-primary": "#233148",
+                        "on-primary-fixed-variant": "#39475f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "80px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "unit": "8px",
+                        "margin-edge": "32px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(23, 42, 69, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(100, 255, 218, 0.4);
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.15);
+        }
+        .ocean-gradient {
+            background: radial-gradient(circle at center, #172a45 0%, #0a192f 100%);
+        }
+    </style>
+</head>
+<body class="bg-primary-container text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#0a192f]/90 backdrop-blur-xl fixed top-0 z-50 w-full border-b border-[#172a45] shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center w-full px-8 h-20">
+<div class="flex items-center gap-stack-lg">
+<a class="flex items-center gap-2 group transform transition-transform active:scale-95" href="_index.html">
+<span class="material-symbols-outlined text-[#64ffda]" style="font-variation-settings: &quot;FILL&quot; 1;">arrow_back</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-slate-400 group-hover:text-[#64ffda] transition-colors">Return to Home</span>
+</a>
+<div class="text-2xl font-black tracking-tighter text-[#64ffda] drop-shadow-[0_0_8px_rgba(100,255,218,0.5)] font-['Plus_Jakarta_Sans'] ml-8">Abyssal Discovery</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#64ffda] p-2 hover:bg-[#172a45]/50 rounded-full transition-all active:scale-95">search</button>
+<button class="material-symbols-outlined text-[#64ffda] p-2 hover:bg-[#172a45]/50 rounded-full transition-all active:scale-95">account_circle</button>
+</div>
+</div>
+</header>
+<main class="pt-24 ocean-gradient min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[409px] flex items-center justify-center px-8 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40" data-alt="A cinematic, wide-angle shot of deep ocean depths with faint bioluminescent particles floating through dark blue water. Sunlight filters from the surface far above in ethereal, shimmering rays of teal and cyan. The atmosphere is mysterious, calm, and vast, establishing a sense of oceanic wonder and scientific exploration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjewgtoa-3m-OFiykFnvA5ZfrtqRDUwbNarCC2l96TjQcwX5TrSAHAgWTktDwo2dMIQHY_fuBR-mzgBVQ9zE3JxFFn07N5vMgOEAVecvsG_mrJbGmgNgVOVRnKSE5WFj0WDc5ydp-vhu2uWvyCr2ax5J45-b8en02kW_o5nMb3wTtr23LjYFvuCUJGPX3nl85b5IbQsN6ubMuLSoJjN9b7UG9707kvCd9FI19J7PEl6tNdqK1uBq2vNgSEihirmYFoqrI20DFAhCI">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary-container"></div>
+</div>
+<div class="relative z-10 text-center">
+<h1 class="font-headline-xl text-[#64ffda] mb-stack-md drop-shadow-lg">Explore the Deep</h1>
+<p class="font-body-lg text-on-primary-container max-w-2xl mx-auto">Venture into the silent world where titans roam. Discover the apex predators and gentle giants that define our blue planet's most mysterious frontiers.</p>
+</div>
+</section>
+<!-- Section: Sharks -->
+<section class="px-8 py-section-gap max-w-container-max mx-auto">
+<div class="flex items-end justify-between mb-stack-lg border-l-4 border-[#64ffda] pl-6">
+<div>
+<h2 class="font-headline-lg text-[#64ffda] tracking-tight">The Apex: Sharks</h2>
+<p class="text-slate-400 font-label-md mt-2">PREDATORS OF THE ABYSSAL REALM</p>
+</div>
+<button class="text-[#64ffda] font-bold flex items-center gap-2">
+                    View All Shark Types <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<!-- Shark Items -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A cinematic underwater close-up of a Great White Shark cruising through sun-dappled deep blue water. Its powerful silhouette is highlighted by sharp teal lighting, showing every detail of its rough skin and dark, focused eye. The mood is intense and awe-inspiring, capturing the raw power of the ocean's most famous predator." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVQG6aGdNw5byhSyku5IcHeRprnVgW8ffuSvS30fQr-J7zvobYe-3JGPQkaB5HbQqoZlXRlp0o-Ez97hqlqHqBZ2JkDzIBJB43a2Qc2pgOf57-eDmdL2geCetKNUYPCdS1GBuJDToAW5Q4_WO8BJCebxLdziKcwYYI9rkVY5TDOHJzrX9X9ketEvTrjM2Jbn0KsZoyrYRYNv6HygOt3iPXeBvwy-k_z06tOp1QXGGAeQaFAi4-Tv9W2OtvguFM8YQNhxlGlO05z_4">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Great White Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Apex</span>
+<a href="https://www.youtube.com/results?search_query=great+white+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Tiger Shark swimming gracefully through a dark, moody coral reef environment with deep teal accents. The lighting is low-key, emphasizing the subtle vertical stripes on the shark's flank as it glides through the shadows. The atmosphere is cinematic and slightly mysterious, showcasing the stealth of this nocturnal hunter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPJ590MK8ITLDW9ToiAXD64b1ruPUNt0KgkxHutE053vK4fMFrOE7L4pWuFC9k_XH95jLNT7jQXr-cc8u56GjOmBnxwOF5ksa5-zB8se20ik23WnrKYlRWD-OjAnAMoTFHuAePgkXJjr1ykS3-w7W8vd20bzNb8qN7E20nKjbRuOanqFPfGklqp-RzM10EVrrM5HZHoe2MRV2ws6dd5R59PkHD2swaAvuNuocJ0bDoJKUhT831N4x77Q2g1jL2oqp9qxQRQWMyTfE">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Tiger Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Scavenger</span>
+<a href="https://www.youtube.com/results?search_query=tiger+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Hammerhead Shark photographed from below against a dark, bioluminescent sea surface. Its unique T-shaped head is silhouetted against the faint light, creating a dramatic and scientific composition. The water is deep navy with glowing teal particles, evoking a sense of deep-sea mystery and biological wonder." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKetSnLG6YPR7MLIB1NVO7WzmJD3284nQJLR4Qm3sI4nK64ECtrbMAu2RBhP6s6tal-hCS_elBazmeicwm4LEk12xJNTBfLJxIl3RGRqb9yhNQq231WsXvSrgmUMycNxkws4p1-zZTN6eiq89AFL1CrZgX4RYHqtBmziv_-VhW7ArC1JE_cxy0QsLETBvydDv5vb9z66Ciuwo316NIJJ54LmqqnMZJS0j2acMKWRSx-RkiFieAj3C6HHyeg88qFTQwx9zd5noCUtE">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Hammerhead Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Coastal</span>
+<a href="https://www.youtube.com/results?search_query=hammerhead+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A massive Whale Shark drifting near the surface of a deep blue ocean, illuminated by soft golden and teal rays of light. Its distinctive pattern of white spots and lines glows faintly in the water. The scale of the animal is emphasized by small schools of fish swimming around it, creating a serene and majestic scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs4DEDut2VdaeSP8DzGQr3bXYi6Y3b68W0515fdWC-X3mnTNvzUJgdZV-LDQ38dDnOCDTTzNOMnEmdfRzrnn7YAN5-KjupFcA7p69M4eyhcA5_JpSLRhZI4eMqG4vdVREOpkaeKgbFDIaxCZrAbbQImfPF-uRmfO9f0dXZrCOihMRmtC0omsr5x7UoWwMov-GjUCz3KCfrNr_STzb9FGazzjsVj0L1Nijl48ZHkLQwnsCr8-YilTL-vbo3nv8vn6TUya3f9587evI">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Whale Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Filter Feeder</span>
+<a href="https://www.youtube.com/results?search_query=whale+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Bull Shark swimming aggressively through murky, dark green and blue coastal waters. The lighting is high-contrast, casting deep shadows over its stocky form. The image captures the intimidating presence of the shark in a dramatic, cinematic style with a focus on its powerful snout and gills." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBby2D1kZGhW3PSNBjwCcZucudexdMmSYwtNaC72iixblbkMbFRX247OMaCQwmpsDXCsy73oSgtwjEJfsliVKhwhwhLNnKdRYT59gHUZE3AAAO95lCfkCrSZ_L4V1heP2lk-OMZcHV4W5PuE7YaLeb_LnLaHQh_CQTPfmQYMUHntGMFYBt99Ls5y1w56f_eAcgS2etyN54x-CB6NmgsmKioBzce73r-5MsFvwlyTcCjTeM1SJXtMEPqtwciV08XjKe50CKN7u3xfZM">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Bull Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Versatile</span>
+<a href="https://www.youtube.com/results?search_query=bull+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Mako Shark leaping through dark, churning water, its sleek and metallic blue body glistening under a cool, moonlight-style glow. The image is dynamic and energetic, conveying incredible speed and power. The surrounding water is filled with air bubbles and bioluminescent trails, creating a high-action cinematic feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPWiVhzAJn1hSQKqUtjPcMQbStYoW-mr9kaejMW7U0SKbpo4qWkPngcwbIF35S9khEyNpwAc-ZlbSWZvzh3z3cMkuqGyE86OsFkCR2Kx3GVPUC5H8sjjnEGJynsN7zQMzQmZQINp_ECT5H2KWeYBD7vPXiYQ8UE_Rca4FdsQbKMwMj3tda1XFQVdlzhovK5bjk2ZuLgjI-RLQ7AaWcfIXByjhRublb0w7So9fffQyX4yWVH2vu18jG0JL2FrPX3Dg1uv-9YqK2a7E">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Mako Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Fastest</span>
+<a href="https://www.youtube.com/results?search_query=mako+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Lemon Shark resting on a sandy seabed in clear, shallow navy water at dusk. The warm yellow-toned skin of the shark contrasts beautifully with the deep blue background. The mood is peaceful and observational, with soft teal lighting highlighting the textures of the shark's skin and the ripples in the sand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHgurPdCohIK8eyMPiKP7BAp4XYL0yvAiDh36KXI_SZbRPWzsSZEdRaIfoBlE35ATXp6HGzGzwcI6gj3xEcqLSj-79o6ehNC9z7HtCRIJB7QTqtRCrR61_l68twQdFcTsjER-nzPtTe5LpooVc-B16KecCosw45h31lV7W492McNwZEqL5V8gdmjHmYnMf2q0nPpP5rZqhsPeHkpeaHaMVPp7Jv9791xThvH_MwLVMQch6X2fdKNxXQT5A3UzGlIuUODK7Qx9b2vI">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Lemon Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Social</span>
+<a href="https://www.youtube.com/results?search_query=lemon+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Nurse Shark lying dormant under a rocky ledge in a dark, midnight-blue ocean setting. The lighting is subtle and moody, with faint teal glows illuminating the edges of its fins. The composition is quiet and intimate, focusing on the calm nature of this bottom-dwelling species in a cinematic deep-sea environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-E5r8s0IyrHQ81wDh9x262kmd4jHJS-0vSvC8Y_femIBaLRRWeqOU7o0ccwDCK0dAoTwbGtu-ZyrjrillOgb45S4pE65wa9JFmhDEBpjUOb_Y-YcXdc0A3NvbzAT-mrbadNP7zAnBFp1Mtero4cwtCjkW22rKoX_Eqb7tUkDh691Hw4oWY_WuYET8B-4tiJK7tlwZ9ngC_jOJA8IAgaw21k-aI9RIWGYDDdK4jJOtW0LJGCO3hQ8_4Z7wWNvVQ6FaxjLNtket5No">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Nurse Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Sedentary</span>
+<a href="https://www.youtube.com/results?search_query=nurse+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Blacktip Reef Shark patroling a vibrant, dark-themed coral reef. The black tips of its fins are sharp and distinct against the deep teal water. The surrounding reef is rendered in moody shades of blue and purple, with small bioluminescent anemones adding a touch of fantasy to the scientific scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5UkUYhig-Q0Vx7Kf-IJsAvCNBl5fa9IQPX1zbGToiqDX2Cd8_9TN9MDfLEYSz_xUwjTJ5GB_12PIARQDv9fpR0diAjMgbgv9NGxOH529sdt7ly4XdopvjbmdX2INpOnoDfV-4sKlZ0OO3tgE8VZqCcwuJvJH2kNZpIAdv3AYqoyRn6J_ZlhJMdmbG6dg20dnzKPJq9p4SruO-ogDmGMXGYILrOnRIy_bIjhICnBjkOSh8c31NW63-pMid0ZrRB0OELnc0Kx4NSEI">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Blacktip Reef Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Reef</span>
+<a href="https://www.youtube.com/results?search_query=blacktip+reef+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Basking Shark with its mouth wide open, filter-feeding in cold, dark plankton-rich waters. The massive scale of its mouth is the focal point, with teal light catching the edges of its gills. The mood is scientific and monumental, portraying this giant as a peaceful yet imposing force in the deep blue expanse." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLciEVxS-L0gXhkpKLbbOI-WWprGtcUjeV59cSD9gWBbgEd9hqbIO_NK7KOcziE9VhPq_iluJxAReir0PuZ8Jk6ekv7UXbWXcDU9_UJvOga6TVsrR4lJuJE0n8edhwXEyVNQvbs0bsM66debuQxucATpLnQCh3k2UnUdgB5DlOZxazX5q2A75W-dapEj3X30SHv2W7hdMQBY7VLyTo14bndBSCZrVVHEIVDSP9fj6A1CD7SUp3O9KNa_qD_aMJndKSepUgbWpJ04Q">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Basking Shark</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Gentle</span>
+<a href="https://www.youtube.com/results?search_query=basking+shark+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Whales -->
+<section class="px-8 py-section-gap max-w-container-max mx-auto bg-[#0a192f]/50 rounded-3xl mb-section-gap">
+<div class="flex items-end justify-between mb-stack-lg border-l-4 border-[#64ffda] pl-6">
+<div>
+<h2 class="font-headline-lg text-[#64ffda] tracking-tight">The Giants: Whales</h2>
+<p class="text-slate-400 font-label-md mt-2">SONGS FROM THE UNCHARTED DEPTHS</p>
+</div>
+<button class="text-[#64ffda] font-bold flex items-center gap-2">
+                    Explore All Whale Types <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+<!-- Whale Items -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A majestic Blue Whale surfacing in a vast, dark navy ocean at twilight. The massive scale of its back is highlighted by shimmering teal water droplets, with a dramatic spray of water from its blowhole. The lighting is cinematic and expansive, capturing the monumental presence of the largest creature to ever live on Earth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGYV4JqBc8iS5kD7Lal0m-IXDHfwYN2JEyihxuQKqKObDv4nI6rMmOY4Oxx-bmwzEMx_wWCIA8eqPr3YCznSaawXlcLUYkgwyE3x3Om73Kbx5Vd2UAhpRRvHJCriGtKSkCOOoHiUwuT9p15LkkJSKa9kSytn7wmKuteuSFtCGekU0NU0ov1A1J9rsN9h87c6SSa3p7aChlyMegvLQqPKyspuwGZ98I1YFoZCQIIj3iFLDtmgU09xYW7JP_tRGF_qOQQTQiBOfKPqA">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Blue Whale</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Immense</span>
+<a href="https://www.youtube.com/results?search_query=blue+whale+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Humpback Whale breaching dramatically out of the water against a dark, moody sky. The splash is captured in high detail, with crystalline water reflecting a faint teal bioluminescence from the deep. The mood is powerful and dynamic, showcasing the energy and majesty of these acrobatic giants in a cinematic setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi8Eyn2bAvLwcLU_qcU3EBZMXX6iG7IHQscUUIFhN_rpXMG8iaWULaJ7xfe5DN2ez8L34d7ipnkSIr03gunPBbMAanucAsxpXi3euAnQfbxzdzqrhfYVUg3aGPZIdhxIWhXDdUkF9xzzspgQPvWcIRAWqgMN9v0YmHordPZdSjtlnHLtzAId99kR3ZA3rER8jxzKd__zm1lEXU1ALC3q2QxG_YlPjoSyztjc2LWe5szooIXO2veg7g6hQwQi0yFqGclRa_pBHdwXU">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Humpback Whale</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Vocalist</span>
+<a href="https://www.youtube.com/results?search_query=humpback+whale+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="An Orca or Killer Whale leaping through a cold, dark Arctic sea. The black and white markings are stark and high-contrast against the deep navy water. The background features misty, dark icebergs under a pale teal sky, creating a cinematic, cold-toned atmosphere of intelligence and predatory precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_UhZTsKSzuxUGIybTO1tnl9u5EhLhIgMjr_fNBFLu2zLSsEO-VdgWPxZ1V0hr44WYjVcEyhXZAlCWdrBfBjcnFugx-GDoPyqrFkRNKqqSlXccYwulZp1RdrgjaPNIpNh5dngvIpjHLspsdn_O4mLG-UWdOydnlOhLxNgQkisKjbkpPy76e3jMGDH358F0Ohpj1vvrjrxx7kl1AMmzd4t1mPh1Ryz7zqPJuvSa-IfKJttyzYG-UEBNeB-2NLnzwNSz3IaXijiCIxo">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_orca.html">⭐Orca</a><div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Apex</span>
+<a href="https://www.youtube.com/watch?v=3DkEePjRP04&pp=ygUKb3JjYSB3aGFsZQ%3D%3D" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Sperm Whale diving deep into the abyssal zone, its massive block-shaped head disappearing into the dark blue void. Faint rays of teal light reach down from above, illuminating the scarred skin of the whale. The scene is quiet and mysterious, emphasizing the incredible depths these whales inhabit in their search for squid." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN3MslipM2A1MOz8F_KCueMjqsQNSE9pSI08wTmi-o5t4M3AbniqFPqe71nh3vr263eBnlaQ8oq4tzehCnWItaTvVTaJc-fOUQwLBP5noRLdTsku9CkOf3oMy28uNYwKRKowNrMqvbvrCLGP9gy2e_G7_CTu8NrvOLXJ3CrChL8eFXxwVCZqpATZR3mDIsJfgFVKXehdtB9IL8ZLbOlh_ba6LGZXYcZu6hEXLCUe-jRmO3eVW7047ewZ79r2cBeZNA650sYQkPKq4">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Right Whale</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Deep Diver</span>
+<a href="https://www.youtube.com/watch?v=6Pjj094pfCQ" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A group of Beluga Whales swimming in icy dark blue water, their white bodies glowing against the deep background. The lighting is soft and ethereal, capturing the gentle nature of these 'canaries of the sea'. The composition is serene and scientific, showing the smooth textures of their skin in a high-quality cinematic style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApXFVu-1gAm68EFsZUbaStiUmYSLlvnYRsbJCg8RFJUZhukENidWER1Fm9YUbTcpG0Ow0rwWsmdmjloCXLPgojkUrJ3qbSLIQWxy2axcp5drTpZ5b2iurhitOc4HKf4Fa7X08aNQNGaBbCjb_rmYahMnzvqKxP3Lf7ALU4QKoDajShlEacmS2ly1DifRxyjncQq_SlgweGMTYLeiScvxfBTsjQccv_KK8GkwyLt7RPglKn8UxrKqVwvHFv04b-8u6117Se4Bi9QXo">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Beluga Whale</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Social</span>
+<a href="https://www.youtube.com/results?search_query=beluga+whale+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Narwhal swimming through a dark, frozen sea with its long spiral tusk breaking the surface. The water is a deep, moody indigo with particles of ice floating like stars. The lighting is low and dramatic, highlighting the unique silhouette of the whale in an environment of mystical Arctic beauty." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJJKcjTLVoVKXj5Q8nymFS-t9IOpYdtKrzZrOmDn2vAx62I82N8Yi1sWG0eBYbXPiDg8efzghxKTpU936o6k8w6zBtsg--7SBXeaWe8bqaCXN9QVDII50NIyIqCKXFNf7FtyQOr88a7wwbwxr9wfvWNHvzkD0aGg2Q1rl-ZTXQp2EdJFYtUcuOHYoVCX3Fjxuzznyzj_Eaw-SaZuGGItLZ3j851zQj-up5QABBCNbbHRxv17XhBJ20h5aBZwuungbcqYKChTzQtoU">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Narwhal</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Arctic</span>
+<a href="https://www.youtube.com/results?search_query=narwhal+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Minke Whale swimming swiftly through deep navy waters, its sleek body reflecting a soft teal light. The image captures its streamlined form and small dorsal fin in a cinematic, scientific study. The background is a vast blue gradient, emphasizing the lonely and fast-paced life of this smaller whale species." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD64O56vShImJCw2aGyQZmq0buc4O5UkClEx-m6kFAQqCrBLkSyjbslGRXS6HavyFgfcLoA0ZvA7mjePijMsaziJv9OfGK72DK4FbXmYNRdAMs2bsn-JxupPDU0_cRMRn-ZOFkUOAd-wBIeYF3sDfvgsE3p7ZVi0jj4er_9BijC5zsgqilOxFHKHMpcajkh7yFXkPjkviNOS8yyZip3lDu6PRi9cdErUj_Rk6JnaWbXpvR1NP0IQR8hTdgYgQ6YntK1kifSXuIbDsU">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Minke Whale</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Sleek</span>
+<a href="https://www.youtube.com/results?search_query=minke+whale+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Gray Whale resting in a kelp forest within dark, emerald-blue waters. The lighting is filtered through the kelp, creating a dappled effect on the whale's barnacle-covered skin. The mood is ancient and grounded, highlighting the textures and history of this migratory giant in a cinematic underwater scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzAnvI6ZcMjigbxBDed_qUhtiR6uPPyt_Xo6MsdDuSXEPmKsgF4oVjejSkUZ4un3d9uHTXtp0bGTw2XWfyUXggroXK5pJH4BYO9V7848qaPlzjLiYF0MaiiDfFqERwXAEDUeRqXvQO4G5ds0qN442Bwjf2ENEEkT2mDlA1sChEnHhNS4haz5mTuO4GOsehendlzYnu3fJ-VegraB64euFX8Hwva9gx1482aGNsGnTZj1QazP265o9_M9LdLxHAX1tGq7ur1B2iYjk">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Gray Whale</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Migratory</span>
+<a href="https://www.youtube.com/results?search_query=gray+whale+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Bowhead Whale swimming under thick Arctic ice, its massive curved jaw silhouetted against the dark blue water. The lighting is cold and low-key, with faint teal glows coming from bioluminescent organisms in the water. The composition is epic and scientific, showcasing the extreme adaptation of this long-lived giant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk-Sn44TANKOgZ8YSvYymhHzqLS8wT2udu5LGJ_ophNFw3FBbu2HPnYvFvjY6SFrODf_8O1jZe5HIpaeI_uOXNLpbxzak3-VlMuKYA0ru9OLZ47UkndxzLbG65-ephMvvYWuCw3KUZ7GIbDd9wvBUemtEvOGeNuJerl-0CLw5UAeMcwn3SmNvj5cdZaq6G9daffhnMBAfpW_xZRGSSnUxhySARv1QxbYN6wwS6peSk_z1AIsuEosjxkvbumloOGxHxpNQRKv87E78">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Bowhead Whale</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Ancient</span>
+<a href="https://www.youtube.com/results?search_query=bowhead+whale+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer transition-all duration-300">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A Fin Whale cruising at high speed through a dark, open ocean. Its long, slender body is highlighted by sharp teal lighting, conveying a sense of immense power and velocity. The water is filled with dramatic streaks of bubbles and movement, creating a high-end cinematic portrayal of the 'greyhound of the sea'." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4lS5H9lacxHRy63ZdZ2vDt6GQE9x02mLYTJlMkdR9PM64q2f6Mgzaq6_XyhieCI8Q-quCVN9Czkdz-vnH7_MVyPWV4o9jAOmkChK9dDs4xlDd97oaVwTjpFkniKRzXaMen-ndOf3Bn6c9Ryj_Kv3ElaJ1NfQY9zVlJZRx4z0guv9GfJY04Ejt3t45HgQo3s8747cM1vP_a7Zz2gO2UA2IOUHbeoRlKmFFobI-ahfkKFrCRqrS7q0qEtxJyM4j-8U5WF5puP-Uptc">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="p-4">
+<h3 class="font-headline-md text-on-background text-lg">Fin Whale</h3>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest">Graceful</span>
+<a href="https://www.youtube.com/results?search_query=fin+whale+documentary" target="_blank" rel="noopener noreferrer" class="px-2 py-0.5 bg-[#0a192f] border border-[#64ffda]/30 rounded-full text-[10px] text-[#64ffda] uppercase font-bold tracking-widest hover:bg-[#64ffda]/10 transition-colors">Video</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#0a192f] border-t border-[#172a45] w-full">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-bold text-[#64ffda]">Abyssal Discovery</div>
+<div class="font-['Plus_Jakarta_Sans'] text-sm text-slate-500">© 2024 Abyssal Discovery. Exploring the Unseen.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Plus_Jakarta_Sans'] text-sm">
+<a class="text-slate-500 hover:text-[#64ffda] transition-colors cursor-pointer" href="#">Scientific Database</a>
+<a class="text-slate-500 hover:text-[#64ffda] transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-[#64ffda] transition-colors cursor-pointer" href="#">Research Grants</a>
+<a class="text-slate-500 hover:text-[#64ffda] transition-colors cursor-pointer" href="#">Contact Us</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 hover:text-[#64ffda] cursor-pointer">language</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-[#64ffda] cursor-pointer">share</span>
+</div>
+</div>
+</footer>
+<!-- FAB (Suppressed for this sub-page intent) -->
+
+
+</body></html>

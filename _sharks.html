@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sharks Directory - Abyssal Explorer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#d6e3ff",
+            "tertiary-container": "#001e17",
+            "outline-variant": "#44474d",
+            "on-tertiary": "#00382d",
+            "primary": "#b9c7e4",
+            "error": "#ffb4ab",
+            "primary-fixed-dim": "#b9c7e4",
+            "surface-dim": "#121414",
+            "secondary-fixed": "#d5e3ff",
+            "on-primary-container": "#74829d",
+            "surface-bright": "#37393a",
+            "tertiary-fixed-dim": "#38debb",
+            "on-secondary": "#1e314c",
+            "on-tertiary-fixed-variant": "#005142",
+            "surface-container": "#1e2020",
+            "on-tertiary-fixed": "#002019",
+            "on-secondary-fixed": "#071c36",
+            "on-primary": "#233148",
+            "on-background": "#e2e2e2",
+            "on-error": "#690005",
+            "secondary": "#b5c7ea",
+            "surface-container-high": "#282a2b",
+            "inverse-primary": "#515f78",
+            "surface-container-low": "#1a1c1c",
+            "error-container": "#93000a",
+            "inverse-surface": "#e2e2e2",
+            "tertiary": "#38debb",
+            "surface-container-highest": "#333535",
+            "outline": "#8f9097",
+            "on-error-container": "#ffdad6",
+            "secondary-container": "#354764",
+            "tertiary-fixed": "#5ffbd6",
+            "on-tertiary-container": "#00937a",
+            "on-surface-variant": "#c5c6cd",
+            "on-primary-fixed": "#0d1c32",
+            "on-secondary-fixed-variant": "#354764",
+            "primary-container": "#0a192f",
+            "surface-tint": "#b9c7e4",
+            "on-secondary-container": "#a3b6d8",
+            "secondary-fixed-dim": "#b5c7ea",
+            "background": "#121414",
+            "surface": "#121414",
+            "surface-container-lowest": "#0c0f0f",
+            "surface-variant": "#333535",
+            "on-primary-fixed-variant": "#39475f",
+            "on-surface": "#e2e2e2",
+            "inverse-on-surface": "#2f3131"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-edge": "32px",
+            "gutter": "24px",
+            "stack-md": "16px",
+            "section-gap": "80px",
+            "unit": "8px",
+            "container-max": "1280px",
+            "stack-sm": "8px",
+            "stack-lg": "32px"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "body-lg": ["Inter"],
+            "headline-xl": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+            "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body { background-color: #0a192f; color: #e2e2e2; }
+    .glass-card { background: rgba(23, 42, 69, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(100, 255, 218, 0.1); transition: all 0.3s ease; }
+    .glass-card:hover { border-color: rgba(100, 255, 218, 0.4); transform: translateY(-4px); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5); }
+    .bioluminescent-glow { box-shadow: 0 0 15px rgba(100, 255, 218, 0.2); }
+  </style>
+</head>
+<body class="font-body-md">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 border-b border-[#64ffda]/20 bg-[#172a45]/80 backdrop-blur-xl shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#64ffda] font-headline-lg">Abyssal Explorer</div>
+<nav class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_SANS'] text-sm tracking-wide">
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_index.html">Home</a>
+<a class="text-[#64ffda] border-b-2 border-[#64ffda] pb-1 font-semibold" href="_sharks.html">Sharks</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_whales.html">Whales</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_conservation.html">Conservation</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_orca.html">Orcas</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_megalodon.html">Megalodon</a>
+
+
+</nav>
+<div class="flex items-center gap-6">
+<button class="text-slate-300 hover:text-[#64ffda] transition-all">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="bg-[#64ffda] text-[#0a192f] px-6 py-2 rounded-md font-bold text-sm hover:bg-[#64ffda]/90 active:scale-95 transition-all">Donate</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-section-gap px-8 max-w-screen-2xl mx-auto">
+<!-- Hero / Title Section -->
+<div class="mb-stack-lg">
+<h1 class="font-headline-xl text-[#64ffda] mb-4">Apex Predators Directory</h1>
+<p class="text-on-surface-variant max-w-2xl font-body-lg">Explore the diverse and majestic species of sharks inhabiting our oceans, from the sunlit surface to the eternal darkness of the abyssal zone.</p>
+</div>
+<!-- Filter & Search Bar -->
+<div class="glass-card p-6 rounded-xl mb-12 flex flex-col md:flex-row gap-gutter items-center">
+<div class="relative w-full md:w-1/3">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-[#0a192f] border border-[#172a45] rounded-lg py-3 pl-12 pr-4 text-on-surface focus:outline-none focus:border-[#64ffda] focus:ring-1 focus:ring-[#64ffda]/50 transition-all" placeholder="Search species..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-4 w-full md:w-2/3 md:justify-end">
+<div class="flex items-center gap-2">
+<span class="text-xs uppercase tracking-widest text-slate-500 font-label-md">Habitat:</span>
+<select class="bg-[#0a192f] border border-[#172a45] rounded-lg px-4 py-2 text-sm text-on-surface focus:border-[#64ffda] focus:outline-none">
+<option>All Habitats</option>
+<option>Pelagic</option>
+<option>Coastal</option>
+<option>Deep Sea</option>
+<option>Coral Reef</option>
+</select>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs uppercase tracking-widest text-slate-500 font-label-md">Size:</span>
+<select class="bg-[#0a192f] border border-[#172a45] rounded-lg px-4 py-2 text-sm text-on-surface focus:border-[#64ffda] focus:outline-none">
+<option>All Sizes</option>
+<option>Small (&lt; 2m)</option>
+<option>Medium (2-5m)</option>
+<option>Large (&gt; 5m)</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Sharks Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Great White Shark -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A massive Great White Shark gliding through sun-drenched turquoise waters near the surface. Sunlight beams penetrate the ocean waves, creating dramatic light rays that illuminate the shark's powerful grey back and white underbelly. The scene is cinematic and awe-inspiring, utilizing a cool ocean-blue color palette with bioluminescent-inspired teal highlights. The lighting is high-contrast, showcasing the shark as a majestic guardian of the deep." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL1XyAGqykwX4zFYRIPxLxrJ6pEJymzzwcXsV8vPKA-l5kI7dn3FKG1H0LEy83ciWVtHTmIp9KvkH29MVP3N5tQsEP2lxI2D6kWY7l8ljvZ7x3kC_p1IPZPLYBE_vFWmpGA9u8Z9rQXpnOnCRbeK52-ulhX5v52BPiL0TSFZOXQytSLmKKvrcKZfKA5iiWfn7EJR8ERT8PNtdYY1UYo4P1RAbq2N68ETygJXtVQ4ZhtOVAoGu20QElpJ0TqZSNV7ERFM2R0oa-_Vc"/>
+<div class="absolute top-4 right-4">
+<span class="bg-[#0a192f]/80 backdrop-blur-md border border-[#64ffda]/40 text-[#64ffda] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Endangered</span>
+</div>
+</div>
+<div class="p-8 flex-grow">
+<h2 class="font-headline-md text-[#64ffda] mb-2">Great White Shark</h2>
+<p class="text-slate-400 mb-6 text-sm">The ocean's most iconic predator, known for its incredible size and breach attacks on marine mammals.</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Max Size</span>
+<span class="text-[#64ffda] font-semibold">6.4 Meters</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Diet</span>
+<span class="text-[#64ffda] font-semibold">Marine Mammals</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Habitat</span>
+<span class="text-[#64ffda] font-semibold">Temperate Coast</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Lifespan</span>
+<span class="text-[#64ffda] font-semibold">70+ Years</span>
+</div>
+</div>
+<button class="w-full border border-[#64ffda]/30 text-[#64ffda] py-3 rounded-lg hover:bg-[#64ffda]/10 transition-all font-semibold active:scale-95">View Research Data</button>
+</div>
+</article>
+<!-- Whale Shark -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A gentle Whale Shark swimming through deep navy blue water, its body covered in a unique pattern of white spots and stripes resembling a star-filled galaxy. Small pilot fish swim alongside this massive filter feeder. The atmosphere is serene and mystical, with soft, diffused bioluminescent lighting that emphasizes the vastness of the deep ocean. The color scheme is dominated by midnight blues and glowing neon teals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3pQIp-OL8QJaB9Cf2LVuOza9mOBaYHiiS2OgRAsELPSjWzgVxei9ihzxl3EBRQ6oJgQ0gUxnlYZ9Cg_of5JN0Nf0q6GeOGcr2r1FFiJOWg8YwrRM6dT4skB-KX75vASfpy206WmE_auJzCtDOKxuxpxbV1-k3TnidNkYVeGb7PVLg3JkLwpjWhK1OCHNKoZpV7BE4D3iFmnBH-JU3VEM5ABvUp73SHhJ8hZiikg4SUstILWRQMD6fBKm-yXULqH_Rq_19oBy0InA"/>
+<div class="absolute top-4 right-4">
+<span class="bg-[#0a192f]/80 backdrop-blur-md border border-[#64ffda]/40 text-[#64ffda] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Vulnerable</span>
+</div>
+</div>
+<div class="p-8 flex-grow">
+<h2 class="font-headline-md text-[#64ffda] mb-2">Whale Shark</h2>
+<p class="text-slate-400 mb-6 text-sm">The largest fish in the sea, these gentle giants are filter feeders that migrate thousands of miles each year.</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Max Size</span>
+<span class="text-[#64ffda] font-semibold">18.8 Meters</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Diet</span>
+<span class="text-[#64ffda] font-semibold">Plankton</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Habitat</span>
+<span class="text-[#64ffda] font-semibold">Tropical Pelagic</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Lifespan</span>
+<span class="text-[#64ffda] font-semibold">100+ Years</span>
+</div>
+</div>
+<button class="w-full border border-[#64ffda]/30 text-[#64ffda] py-3 rounded-lg hover:bg-[#64ffda]/10 transition-all font-semibold active:scale-95">View Research Data</button>
+</div>
+</article>
+<!-- Hammerhead Shark -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A unique Scalloped Hammerhead Shark silhouette against a dark, moody blue background. The lighting is focused and dramatic, highlighting the peculiar T-shaped head and its sleek, hydrodynamic body. Subtle teal glowing particles in the water mimic bioluminescence, creating a scientific yet cinematic feel. The background is a gradient of deep navy, simulating the layered depths of the open ocean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp-wGp_f5wUX_hE2wMPG3HH_LnGiotW2OPNGx-oEVxUVzPk4-nsvBhggjkqBZMAMQoYI03r64rKVG_MjDz-T--oPsB0sZRZUEqytyaWnA7GfTbWoBBCU11t7nKlhLSrbcO3mCiqRJtglWNFDUHyRMdgT0t-6jCFJG866pHSX-r-OLnRZnCR8SY3Sx6qS57Spp6EG7wX62ECr9DH-sAl9MEthKuFDDpR3MMoKccDlYK5feVkKRh75A9oTjRxLi_PKZRslb2QL0A_C0"/>
+<div class="absolute top-4 right-4">
+<span class="bg-[#0a192f]/80 backdrop-blur-md border border-[#64ffda]/40 text-[#64ffda] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Critically Endangered</span>
+</div>
+</div>
+<div class="p-8 flex-grow">
+<h2 class="font-headline-md text-[#64ffda] mb-2">Sphyrna lewini</h2>
+<p class="text-slate-400 mb-6 text-sm">Recognizable by their distinctive cephalofoil, hammerheads have superior panoramic vision and specialized sensors.</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Max Size</span>
+<span class="text-[#64ffda] font-semibold">4.3 Meters</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Diet</span>
+<span class="text-[#64ffda] font-semibold">Stingrays / Fish</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Habitat</span>
+<span class="text-[#64ffda] font-semibold">Tropical Coastal</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Lifespan</span>
+<span class="text-[#64ffda] font-semibold">30 Years</span>
+</div>
+</div>
+<button class="w-full border border-[#64ffda]/30 text-[#64ffda] py-3 rounded-lg hover:bg-[#64ffda]/10 transition-all font-semibold active:scale-95">View Research Data</button>
+</div>
+</article>
+<!-- Tiger Shark -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A Tiger Shark patrolling a vibrant coral reef at twilight. The dark stripes along its flanks are visible against the deep indigo water. The reef below glows with subtle neon colors, reflecting the bioluminescent aesthetic of the brand. Cinematic shadows and soft light beams from the surface create a mysterious, layered atmosphere of oceanic depth and power. The style is sharp, clean, and highly detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASj0KEzVfHfRJ2_AiNUGOuNNkmE1Iq3MDKr4nGHHfrbvL2eBUKjFY0nDT5Nsa6T6F4AxKPHebGvaM43ECNfynsC5397pihYONLc6uvres7Kw6d1ZEULEkyXZCSAHTG5AcTKEvW3uqa6lVhfsaKdT7YQrhEjSHpkIaCDvMpWsJLbLz_sAJjcgr-n_MfUgEuCsbUO1UTp0W0pYRhTypA-2pMPUO2uNiMw8yxELKsl6FbhWPCuVsApEixcZLHc_XbSG4Gd_uDbLxEluU"/>
+<div class="absolute top-4 right-4">
+<span class="bg-[#0a192f]/80 backdrop-blur-md border border-[#64ffda]/40 text-[#64ffda] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Near Threatened</span>
+</div>
+</div>
+<div class="p-8 flex-grow">
+<h2 class="font-headline-md text-[#64ffda] mb-2">Tiger Shark</h2>
+<p class="text-slate-400 mb-6 text-sm">Known as the 'dustbin of the sea', these opportunistic hunters have an incredibly varied diet and distinctive stripes.</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Max Size</span>
+<span class="text-[#64ffda] font-semibold">5.5 Meters</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Diet</span>
+<span class="text-[#64ffda] font-semibold">Varied Marine Life</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Habitat</span>
+<span class="text-[#64ffda] font-semibold">Tropical Reefs</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Lifespan</span>
+<span class="text-[#64ffda] font-semibold">50 Years</span>
+</div>
+</div>
+<button class="w-full border border-[#64ffda]/30 text-[#64ffda] py-3 rounded-lg hover:bg-[#64ffda]/10 transition-all font-semibold active:scale-95">View Research Data</button>
+</div>
+</article>
+<!-- Greenland Shark -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A mysterious Greenland Shark moving slowly through the frigid, dark waters of the Arctic deep. The lighting is cold and dim, with a heavy emphasis on deep navy and icy blue tones. Particles of 'marine snow' drift through the water like slow-falling bioluminescent sparks. The shark's weathered skin and ancient appearance are highlighted by a soft, ethereal glow, evoking a sense of eternal mystery and extreme longevity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEBFpAxoidKArgfUR3hmYR7ythp5JIVLVX-j5misSs58rkYAadVj-UVVHEW5aGVG4Q0AHSbegSAdMbmNE3TjVjtm7LNElecwKcDfVCAKrn6PwRLnqtEYgj1803Gb1uqIeD2wMgIpruNITDHfTjuK9rEgwvsc5Vu-3kMXhL-Cdu7eDIj6MjoO4hBpu3LdVzXXBevaZzvWr9vcp4P0mQ-9J7M8UtjzuAsrIorHZtHkcbNbIpA6zJBYT-CuF3SsJWo-AIC5OEJDj6Yl0"/>
+<div class="absolute top-4 right-4">
+<span class="bg-[#0a192f]/80 backdrop-blur-md border border-[#64ffda]/40 text-[#64ffda] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Vulnerable</span>
+</div>
+</div>
+<div class="p-8 flex-grow">
+<h2 class="font-headline-md text-[#64ffda] mb-2">Greenland Shark</h2>
+<p class="text-slate-400 mb-6 text-sm">One of the longest-living vertebrates, these slow-moving giants inhabit the freezing depths of the North Atlantic.</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Max Size</span>
+<span class="text-[#64ffda] font-semibold">7.3 Meters</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Diet</span>
+<span class="text-[#64ffda] font-semibold">Fish / Seals</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Habitat</span>
+<span class="text-[#64ffda] font-semibold">Arctic Deep</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Lifespan</span>
+<span class="text-[#64ffda] font-semibold">400+ Years</span>
+</div>
+</div>
+<button class="w-full border border-[#64ffda]/30 text-[#64ffda] py-3 rounded-lg hover:bg-[#64ffda]/10 transition-all font-semibold active:scale-95">View Research Data</button>
+</div>
+</article>
+<!-- Mako Shark -->
+<article class="glass-card rounded-xl overflow-hidden flex flex-col">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A Shortfin Mako Shark captured in a burst of speed, its metallic blue skin gleaming under high-contrast lighting. The water is a deep, dark indigo, with streaks of light conveying a sense of rapid movement. The design uses neon teal accents to outline the shark's aerodynamic shape against the midnight backdrop. The mood is high-energy and scientific, showcasing the ocean's fastest shark in its natural, open-ocean habitat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHqu8UCUiDTZLWzdUrfef5LuBi5imnpxn_pRRK-L1jbv29aEsBHMLvtudBOKxUG9X4VNmQcnGCOCkg_XF6uL_FuCUSOPjnv211g3f_P-aAGE0V2caB669HJMTywN5zzmegAVcOh_gGmdPrKSyQvgA1jwMzMc86ouVQZd2uJSeEqsAYJx-Ty0r_Q5ezVS3UtYQBCoz23yCupllGugUYI2qCvBFwRGeqIOcVPy3uImmGE0WBuBIoaPDZ-Mll96oNggUiDceXR70OySM"/>
+<div class="absolute top-4 right-4">
+<span class="bg-[#0a192f]/80 backdrop-blur-md border border-[#64ffda]/40 text-[#64ffda] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Endangered</span>
+</div>
+</div>
+<div class="p-8 flex-grow">
+<h2 class="font-headline-md text-[#64ffda] mb-2">Shortfin Mako</h2>
+<p class="text-slate-400 mb-6 text-sm">The fastest shark in the world, capable of reaching speeds up to 45 mph during high-speed pursuits.</p>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Max Size</span>
+<span class="text-[#64ffda] font-semibold">4.0 Meters</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Diet</span>
+<span class="text-[#64ffda] font-semibold">Swordfish / Tuna</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Habitat</span>
+<span class="text-[#64ffda] font-semibold">Open Pelagic</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Lifespan</span>
+<span class="text-[#64ffda] font-semibold">30 Years</span>
+</div>
+</div>
+<button class="w-full border border-[#64ffda]/30 text-[#64ffda] py-3 rounded-lg hover:bg-[#64ffda]/10 transition-all font-semibold active:scale-95">View Research Data</button>
+</div>
+</article>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-16 flex justify-center">
+<button class="flex items-center gap-2 text-[#64ffda] font-bold py-3 px-8 rounded-full border border-[#64ffda] hover:bg-[#64ffda]/10 transition-all bioluminescent-glow active:scale-95">
+<span>Discover More Species</span>
+<span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#172a45] pt-12 pb-8 bg-[#0a192f]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 gap-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-lg font-black text-[#64ffda] uppercase tracking-widest">Abyssal Explorer</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Plus_Jakarta_SANS'] text-xs uppercase tracking-widest">
+<a class="text-slate-500 hover:text-[#64ffda] transition-colors transition-opacity hover:opacity-80" href="#">About Us</a>
+<a class="text-slate-500 hover:text-[#64ffda] transition-colors transition-opacity hover:opacity-80" href="#">Research Partners</a>
+<a class="text-slate-500 hover:text-[#64ffda] transition-colors transition-opacity hover:opacity-80" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-[#64ffda] transition-colors transition-opacity hover:opacity-80" href="#">Terms of Service</a>
+</div>
+<div class="text-slate-500 text-xs uppercase tracking-widest">
+        © 2024 Abyssal Explorer. Protecting our blue planet.
+      </div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Orca Directory - Abyssal Explorer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#93000a",
+                      "outline": "#8f9097",
+                      "on-background": "#e2e2e2",
+                      "on-primary-fixed": "#0d1c32",
+                      "surface-container-high": "#282a2b",
+                      "primary-container": "#0a192f",
+                      "surface-container-highest": "#333535",
+                      "on-tertiary-fixed-variant": "#005142",
+                      "secondary-fixed-dim": "#b5c7ea",
+                      "on-error": "#690005",
+                      "surface-dim": "#121414",
+                      "surface-container-low": "#1a1c1c",
+                      "inverse-primary": "#515f78",
+                      "inverse-on-surface": "#2f3131",
+                      "tertiary": "#38debb",
+                      "primary": "#b9c7e4",
+                      "on-tertiary-fixed": "#002019",
+                      "primary-fixed": "#d6e3ff",
+                      "on-surface": "#e2e2e2",
+                      "tertiary-container": "#001e17",
+                      "tertiary-fixed-dim": "#38debb",
+                      "on-primary-fixed-variant": "#39475f",
+                      "background": "#121414",
+                      "on-secondary-fixed": "#071c36",
+                      "outline-variant": "#44474d",
+                      "surface": "#121414",
+                      "on-tertiary-container": "#00937a",
+                      "inverse-surface": "#e2e2e2",
+                      "secondary-container": "#354764",
+                      "error": "#ffb4ab",
+                      "on-primary-container": "#74829d",
+                      "surface-tint": "#b9c7e4",
+                      "on-primary": "#233148",
+                      "surface-container": "#1e2020",
+                      "secondary-fixed": "#d5e3ff",
+                      "primary-fixed-dim": "#b9c7e4",
+                      "on-surface-variant": "#c5c6cd",
+                      "surface-variant": "#333535",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-fixed": "#5ffbd6",
+                      "on-secondary-container": "#a3b6d8",
+                      "surface-container-lowest": "#0c0f0f",
+                      "surface-bright": "#37393a",
+                      "on-secondary": "#1e314c",
+                      "on-secondary-fixed-variant": "#354764",
+                      "secondary": "#b5c7ea",
+                      "on-tertiary": "#00382d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "stack-md": "16px",
+                      "stack-lg": "32px",
+                      "container-max": "1280px",
+                      "stack-sm": "8px",
+                      "section-gap": "80px",
+                      "margin-edge": "32px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body { background-color: #0a192f; color: #e2e2e2; }
+    .glass-card { background: rgba(23, 42, 69, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(100, 255, 218, 0.1); transition: all 0.3s ease; }
+    .glass-card:hover { border-color: rgba(100, 255, 218, 0.4); transform: translateY(-4px); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5); }
+    .bioluminescent-glow { box-shadow: 0 0 15px rgba(100, 255, 218, 0.2); }
+  </style>
+</head>
+<body class="bg-[#0a192f] text-on-surface font-body-md">
+<!-- TopAppBar -->
+<header class="sticky top-0 w-full z-50 flex justify-between items-center px-8 h-20 bg-slate-950/80 backdrop-blur-xl border-b border-teal-500/20 shadow-[0_8px_32px_rgba(0,0,0,0.4)] font-['Plus_Jakarta_Sans'] antialiased">
+<div class="text-2xl font-black text-teal-400 tracking-tighter">Abyssal Explorer</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_index.html">Home</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_sharks.html">Sharks</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_whales.html">Whales</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_conservation.html">Conservation</a>
+<a class="text-[#64ffda] border-b-2 border-[#64ffda] pb-1 font-semibold" href="_orca.html">Orcas</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_megalodon.html">Megalodon</a>
+
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-teal-400 text-[#0a192f] px-6 py-2 rounded-full font-bold hover:bg-teal-300 transition-all active:scale-95">Support Ocean</button>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-teal-400 transition-colors" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-teal-400 transition-colors" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<main class="min-h-screen">
+<!-- Hero Section -->
+<section class="relative h-[870px] w-full overflow-hidden flex items-end">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-transparent z-10"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-[#0a192f]/80 via-transparent to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="A majestic orca breaching high out of the deep navy arctic waters, captured mid-air with crystalline water droplets glistening against its sleek black and white skin. The lighting is cinematic, with a cool moonlight-inspired glow filtering through a misty atmosphere. The color palette is dominated by deep oceanic blues and brilliant bioluminescent teals, creating a sense of epic mystery and natural wonder." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA98-_QcWUXgJAXO3pfkyWHgp-ySFyLGO4rIMe6TSi3r62hirm0OsoeyqNqhUYxnya99jwLmnA7gV8hKWl9nRLhiqaa1-r3CZV-rCtjigTX2kO7J880kwTUsYtuyeJmUdww9lnNen7qmyqM61YCtcnFf0IHQh-yZJD8zj3SDKcre9Gkks0uwX1gYvSyK4QwHNqgy_PaqkYwIzkmAScy3z7lPQH2a_76qy2JT-_Rq2kXSqoeeuC9s2IT-FBz-ZU1Oepx4o4ni0_rG3o"/>
+</div>
+<div class="container mx-auto px-margin-edge pb-section-gap relative z-20">
+<div class="max-w-4xl">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-teal-400/10 border border-teal-400/30 text-teal-400 px-3 py-1 rounded-full text-label-md uppercase tracking-widest">Apex Predator</span>
+<span class="bg-error-container/20 border border-error-container/40 text-error px-3 py-1 rounded-full text-label-md uppercase tracking-widest">Data Deficient</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-2 text-glow">Orca (Killer Whale)</h1>
+<p class="font-headline-md text-headline-md italic text-teal-400 mb-8 opacity-90">Orcinus orca</p>
+</div>
+</div>
+</section>
+<div class="container mx-auto px-margin-edge py-stack-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Main Core Content -->
+<div class="lg:col-span-8 space-y-section-gap">
+<!-- Narrative 1 -->
+<article class="glass-card p-10 rounded-2xl relative overflow-hidden group">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-teal-400/5 rounded-full blur-3xl group-hover:bg-teal-400/10 transition-colors"></div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6 flex items-center gap-4">
+<span class="material-symbols-outlined text-teal-400" data-icon="psychology">psychology</span>
+                            The Ocean's Most Intelligent Hunter
+                        </h2>
+<div class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed space-y-4">
+<p>Orcas are not just hunters; they are tactical geniuses of the deep. Operating in highly coordinated social pods, they demonstrate a level of sophistication rarely seen in the animal kingdom. From creating artificial waves to wash seals off ice floes to beaching themselves with surgical precision to catch sea lions, their methods are as diverse as the oceans they inhabit.</p>
+<p>Each pod passes down unique hunting strategies through generations, representing a form of non-human culture that scientists are only beginning to decode. This cultural transmission ensures that a pod's collective knowledge thrives across decades.</p>
+</div>
+</article>
+<!-- Narrative 2 -->
+<article class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="glass-card p-8 rounded-2xl border-l-4 border-l-teal-400">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-400" data-icon="record_voice_over">record_voice_over</span>
+                                Apex Culture
+                            </h3>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                                Their vocalizations are far more than mere communication; they are complex regional dialects. A pod from the North Pacific speaks a completely different 'language' than one in the Antarctic, featuring distinct whistles and clicks used for both navigation and social bonding.
+                            </p>
+</div>
+<div class="glass-card p-8 rounded-2xl border-l-4 border-l-primary">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-teal-400" data-icon="public">public</span>
+                                Global Travelers
+                            </h3>
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                                Found in every single ocean on Earth, Orcas are the ultimate global citizens. While some populations stay in specialized home ranges, others migrate thousands of miles following seasonal food sources, navigating the vast oceanic dark with biological sonar.
+                            </p>
+</div>
+</article>
+<!-- Visual Gallery -->
+<section>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">Ecosystem Portraits</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 h-[600px]">
+<div class="col-span-2 row-span-2 rounded-2xl overflow-hidden glass-card">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A wide cinematic shot of a pod of orcas swimming through the glassy, ice-flecked waters of the Antarctic. The towering, blue-tinged glaciers in the background provide a stark, majestic contrast to the deep navy water. The lighting is crisp and cool, highlighting the streamlined bodies of the whales as they move in unison, creating a sense of powerful community and frozen beauty." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIQrNBSD7DH3xhbeI8NgaiCdqDS121d0H6GAkpkfHVZnTQ5grZ_Ui_i2BHeElN83DVa7wpvqUidTNGQSE56qIgJpg8If-hN3Yk_cuwQYM1r_9Q1Aerazzo9EFVSr9-MZKY2lRL__8PegvOzoYFfc8Mdi05QfYo4RKzc9zqLkUJZL2W43wtnYU3XtiVcMxA7zfVlNOHkynf-Hyb3thBdhBx4QSxe91pgC73bm3ja3j4Zd2lwkD3OysLb1kSRp44bcPM8cPgiefVZeI"/>
+</div>
+<div class="rounded-2xl overflow-hidden glass-card">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="An intimate close-up of an orca's dorsal fin cutting through the dark Pacific waters during a golden hour sunset. The water is churning with white foam, catching the warm amber light and contrasting with the deep navy and teal shadows. The scene is full of energy and movement, reflecting the raw power and grace of the ocean's apex predator in its natural habitat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvkNhn64IlhtDK0-S8yd-o5SAwYUnjfxpXjV0wiyVR-7C2r8NPkhEVl5PY0Sy2sON_F1I_LWaGUZ6JNTeQlE_nc6d4Yrv5dFovGU5UFm9PxO4MAOsnm4HrKTjRlKDdyglfx7-UlpjSEd2vLaOxOa52SZ67MYaYLbahJuK_y0-cUr373NVcrW6fwBdFRKqRCglX9Sc3Q_5iD2R2W8C8Y0QT41Sk_2hTeBIYE39NpiHZ72k0D68vG3V5WJQUfktp8_Ux-9fAPzsGKJY"/>
+</div>
+<div class="rounded-2xl overflow-hidden glass-card">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A tranquil aerial view of an orca swimming peacefully in a shallow coastal bay with emerald green and teal water. The sandy bottom is visible through the clear liquid, and the sunlight creates shimmering caustic patterns on the whale's back. The mood is serene and educational, showcasing a different, gentler side of the species' diverse environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOn-HMx24qbFp3VBxSDZXt84DEu-9BARQ5hygg7kuATKospNl_SwTvKLH0E7SPsqYOYLPJ5ylOPqa1XK4YZRdKgwz6LLZWp7hFCAWEjLieJ9oX8kATAde9EAPjnqH0Vibx3MQx5yhRyU1Fh-XsUeE11RpIyOEDe8sTZ6U7_0w7KyBldCSNFTH51E_b0NOygZX_c73BoUOLOg51SlqncVfUBJoo12URaVrZ9ZXwpkrKgSZEmAB4TwqIvtnufk7FAliOIfs3RGDEBKA"/>
+</div>
+</div>
+</section>
+</div>
+<!-- Fact File Sidebar -->
+<aside class="lg:col-span-4 space-y-stack-lg">
+<div class="glass-card p-8 rounded-2xl sticky top-24">
+<h3 class="font-headline-md text-headline-md text-teal-400 mb-6 uppercase tracking-tighter">Species Dossier</h3>
+<div class="space-y-6">
+<div class="flex justify-between items-center py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-md">Kingdom</span>
+<span class="font-bold text-on-surface">Animalia</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-md">Class</span>
+<span class="font-bold text-on-surface">Mammalia</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-md">Average Size</span>
+<span class="font-bold text-on-surface">23-32 feet</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-md">Weight</span>
+<span class="font-bold text-on-surface">Up to 6 tons</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-md">Lifespan</span>
+<span class="font-bold text-on-surface">50-80 years</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-white/5">
+<span class="text-on-surface-variant font-label-md">Speed</span>
+<span class="font-bold text-on-surface">35 mph</span>
+</div>
+</div>
+<div class="mt-10">
+<h4 class="font-label-md text-teal-400 mb-4 uppercase">Global Distribution</h4>
+<div class="rounded-xl overflow-hidden aspect-video bg-slate-950 relative border border-white/10">
+<img class="w-full h-full object-cover opacity-60" data-alt="A stylized, dark-themed cartographic map of the world with bioluminescent teal highlights across all coastal and deep-sea regions, indicating the global distribution of orcas. The map uses a minimalist, high-contrast aesthetic with deep navy continents and glowing grid lines. The visual style is scientific and modern, fitting perfectly within a premium digital ocean exploration interface." data-location="Global Oceans" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmzcpDE5KCkBsIGH5m0OIgX_8I99DdBXxCdItgk_GYJUUI--OwJgD0Zh_2WImqG_oBA8POEZra2Bk2uqPTujdnH8UrxhVhyxuVcooEFpcbvH1Wd7y0JTLs_nyEBvnj5uH4V0kRFMF2BvbJirOzkB1CSFp91NxZHDqUbfg5-RU-6ktWZ4LgSC7y54A9gZuiWUkfaXi-KXoLojxF_txxxXw8C_eMDpFQBa7ai_oByWFQQmkx2nTbCXcLrGak1h48gvOH0gVbc-LOV4A"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-[10px] text-teal-400 font-bold bg-[#0a192f]/80 px-3 py-1 rounded-full border border-teal-400/20">Habitat Range: Global</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<!-- Call to Action Section -->
+<section class="container mx-auto px-margin-edge py-section-gap">
+<div class="glass-card rounded-[2rem] p-12 text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-teal-400/5 to-transparent"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-6xl text-teal-400 mb-6" data-icon="water_drop">water_drop</span>
+<h2 class="font-headline-xl text-headline-xl mb-4">Protect the Pod</h2>
+<p class="text-on-surface-variant font-body-lg mb-10">The survival of these intelligent giants depends on healthy oceans and noise-free habitats. Your support directly funds conservation efforts and critical marine research.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="https://whalemuseum.org/collections/adopt-an-orca" class="inline-block bg-teal-400 text-[#0a192f] px-10 py-4 rounded-full font-bold text-lg hover:shadow-[0_0_20px_rgba(100,255,218,0.4)] transition-all">Adopt an Orca</a>
+<a href="https://marine-conservation.org/" class="inline-block border-2 border-teal-400 text-teal-400 hover:bg-teal-400/10 px-10 py-4 rounded-full font-bold text-lg transition-all">Support Marine Research</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Simulation (Based on TopAppBar styling & style guidance) -->
+<footer class="bg-slate-950 border-t border-teal-500/20 py-16">
+<div class="container mx-auto px-margin-edge">
+<div class="flex flex-col md:flex-row justify-between gap-12">
+<div class="max-w-xs">
+<div class="text-2xl font-black text-teal-400 tracking-tighter mb-6">Abyssal Explorer</div>
+<p class="text-on-surface-variant text-sm leading-relaxed">Dedicated to the discovery, documentation, and conservation of the world's most mysterious marine inhabitants.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div>
+<h4 class="text-on-surface font-bold mb-4">Explore</h4>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Marine Life</li>
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Coral Reefs</li>
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Deep Trench</li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-bold mb-4">Science</h4>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Research Papers</li>
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Data Sets</li>
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Expeditions</li>
+</ul>
+</div>
+<div>
+<h4 class="text-on-surface font-bold mb-4">Community</h4>
+<ul class="space-y-2 text-on-surface-variant text-sm">
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Member Portal</li>
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Education</li>
+<li class="hover:text-teal-400 transition-colors cursor-pointer">Support</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[12px] text-on-surface-variant">© 2024 Abyssal Explorer. Scientific data provided by Marine Bio Institute.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-teal-400 cursor-pointer" data-icon="language">language</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-teal-400 cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-teal-400 cursor-pointer" data-icon="policy">policy</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-6 md:hidden bg-slate-900/90 backdrop-blur-2xl border-t border-teal-500/20 shadow-[0_-4px_24px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-slate-300 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wide mt-1">Discover</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-slate-300 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wide mt-1">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-slate-300 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wide mt-1">Map</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-slate-300 transition-all active:scale-90">
+<span class="material-symbols-outlined" data-icon="bookmarks">bookmarks</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-semibold tracking-wide mt-1">Saved</span>
+</div>
+</nav>
+</body></html>

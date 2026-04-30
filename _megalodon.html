@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#b9c7e4",
+                    "outline": "#8f9097",
+                    "on-secondary-fixed-variant": "#354764",
+                    "surface": "#121414",
+                    "on-secondary-fixed": "#071c36",
+                    "surface-container": "#1e2020",
+                    "surface-dim": "#121414",
+                    "surface-container-high": "#282a2b",
+                    "on-tertiary": "#00382d",
+                    "inverse-surface": "#e2e2e2",
+                    "primary": "#b9c7e4",
+                    "tertiary-fixed-dim": "#38debb",
+                    "on-tertiary-fixed": "#002019",
+                    "surface-container-lowest": "#0c0f0f",
+                    "on-primary-fixed-variant": "#39475f",
+                    "on-background": "#e2e2e2",
+                    "on-tertiary-container": "#00937a",
+                    "tertiary": "#38debb",
+                    "inverse-primary": "#515f78",
+                    "on-primary-fixed": "#0d1c32",
+                    "surface-tint": "#b9c7e4",
+                    "surface-container-highest": "#333535",
+                    "secondary-container": "#354764",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#c5c6cd",
+                    "on-secondary": "#1e314c",
+                    "surface-variant": "#333535",
+                    "inverse-on-surface": "#2f3131",
+                    "error-container": "#93000a",
+                    "secondary-fixed-dim": "#b5c7ea",
+                    "error": "#ffb4ab",
+                    "secondary-fixed": "#d5e3ff",
+                    "outline-variant": "#44474d",
+                    "background": "#121414",
+                    "tertiary-fixed": "#5ffbd6",
+                    "tertiary-container": "#001e17",
+                    "surface-bright": "#37393a",
+                    "on-primary-container": "#74829d",
+                    "secondary": "#b5c7ea",
+                    "on-primary": "#233148",
+                    "surface-container-low": "#1a1c1c",
+                    "on-secondary-container": "#a3b6d8",
+                    "primary-container": "#0a192f",
+                    "on-surface": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#005142",
+                    "on-error-container": "#ffdad6",
+                    "primary-fixed": "#d6e3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "gutter": "24px",
+                    "section-gap": "80px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "margin-edge": "32px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(23, 42, 69, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        .bioluminescent-glow {
+            box-shadow: 0 0 20px rgba(100, 255, 218, 0.15);
+        }
+        body {
+            background-color: #0a192f;
+            color: #e2e2e2;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-slate-950/80 backdrop-blur-md border-b border-teal-400/20 shadow-2xl shadow-teal-900/20">
+<div class="text-2xl font-bold tracking-tighter text-teal-400 font-plus-jakarta uppercase tracking-widest">AbyssArchive</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_index.html">Home</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_sharks.html">Sharks</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_whales.html">Whales</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_conservation.html">Conservation</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_orca.html">Orcas</a>
+<a class="text-[#64ffda] border-b-2 border-[#64ffda] pb-1 font-semibold" href="_megalodon.html">Megalodon</a>
+
+
+</nav>
+<div class="flex items-center gap-4 text-teal-400">
+<span class="material-symbols-outlined cursor-pointer active:scale-95 transition-transform">menu</span>
+<span class="material-symbols-outlined cursor-pointer active:scale-95 transition-transform">account_circle</span>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[921px] w-full flex items-end overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-contrast underwater scene depicting a colossal Megalodon shark swimming through shafts of bioluminescent teal light in a dark, prehistoric ocean. The water is a deep navy blue, filled with micro-particles and silhouettes of ancient marine life in the distance. The lighting is dramatic, highlighting the massive serrated teeth and powerful muscular frame of the predator as it emerges from the shadows. The mood is mysterious and awe-inspiring, utilizing a dark-mode aesthetic with vibrant neon teal highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvpP2A5gFYpY-Db7dKWJ3XNNkriDkl7g68XHZKyHF3ZX2ES_fVsEjvtfa0elRj1-0uaT4kCHuBj1EG90HrYe6DGUHIK6Tmg2Iyozr6EvH5JOzsiHTX0rKFSa4AKSQCHMJfWvaw4TywmjXKBqlZyyoBvsRn9UZirWtqXp6kDmA5cMiiPWWJyHAdbI9k215AD19xAblHklduqE9isMaPJ8tXFa00k_8Wxd8GGMpoITBWgtzUUlxomMe_8z7sXj_EkQcqoGKvtMSzeCU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-[#0a192f]/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-edge pb-section-gap max-w-container-max mx-auto w-full">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-400/10 border border-teal-400/30 mb-stack-md">
+<span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
+<span class="font-label-md text-teal-400 uppercase tracking-widest">Apex Predator Log</span>
+</div>
+<h1 class="font-headline-xl text-on-surface mb-stack-sm max-w-3xl">Megalodon: The Ancient Ruler</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">
+                Dominating the oceans for over 13 million years, Otodus megalodon was the ultimate apex predator to ever swim the Earth's waters.
+            </p>
+</div>
+</section>
+<!-- Main Content Cluster -->
+<main class="max-w-container-max mx-auto px-margin-edge py-section-gap grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Species Dossier Sidebar (Bento Style) -->
+<aside class="lg:col-span-4 flex flex-col gap-stack-md">
+<div class="glass-panel p-stack-lg rounded-xl bioluminescent-glow">
+<h3 class="font-headline-md text-teal-400 mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+                    Species Dossier
+                </h3>
+<div class="space-y-stack-md">
+<div class="flex justify-between items-center border-b border-teal-400/10 pb-2">
+<span class="text-on-surface-variant font-label-md">Estimated Size</span>
+<span class="text-teal-400 font-bold">50-60 feet</span>
+</div>
+<div class="flex justify-between items-center border-b border-teal-400/10 pb-2">
+<span class="text-on-surface-variant font-label-md">Weight</span>
+<span class="text-teal-400 font-bold">Up to 100 tons</span>
+</div>
+<div class="flex justify-between items-center border-b border-teal-400/10 pb-2">
+<span class="text-on-surface-variant font-label-md">Era</span>
+<span class="text-teal-400 font-bold">Miocene to Pliocene</span>
+</div>
+<div class="flex justify-between items-center border-b border-teal-400/10 pb-2">
+<span class="text-on-surface-variant font-label-md">Status</span>
+<span class="px-2 py-0.5 bg-red-500/20 text-red-400 rounded-full text-xs font-bold uppercase">Extinct</span>
+</div>
+</div>
+<div class="mt-stack-lg p-stack-md bg-primary-container rounded-lg border border-teal-400/20">
+<p class="text-sm text-on-primary-container italic">
+                        "The Megalodon's bite force was estimated at 108,000 to 182,000 newtons, enough to crush a prehistoric whale's skull."
+                    </p>
+</div>
+</div>
+<div class="glass-panel p-stack-lg rounded-xl overflow-hidden relative group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700" data-alt="A close-up photographic study of a massive fossilized Megalodon tooth, showing the sharp serrated edges and dark, mineral-stained enamel. The tooth is displayed in a museum setting with dramatic, low-key lighting that emphasizes its scale and lethal design. Subtle teal highlights glisten off the polished surface against a deep navy background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHfznDqqCoQPcp5um9LDWN683_lQdE5YcVzxvgSbIav_9IWaqBJQaoksOArrj1OD-by7aHDzq-AMUVtDK62i1uahdanwv6oFTvQbrpzjfhnvgR6feUQ11CFdEJwsSHQDC-o9oeXOmDzVm-TQZYYLyJvJm8x2pExwL1XDFULu6yLhpY9mlXxd1PQKZvSogR4a0UW3TZuNUGO68hYjYo7HejUYJXRLxAc6Y-Pihc7mfUkntfPwAiUGMbKiuIoO-YB9TYLRBqyWESyQg"/>
+<div class="relative z-10">
+<h4 class="font-headline-md text-on-surface mb-2">Fossil Records</h4>
+<p class="text-sm text-on-surface-variant mb-4">View the global map of Megalodon tooth discovery sites and research centers.</p>
+<button class="bg-teal-400 text-slate-900 px-4 py-2 rounded-lg font-bold text-sm flex items-center gap-2 hover:bg-teal-300 transition-colors">
+                        Explore Map <span class="material-symbols-outlined text-sm" data-icon="map">map</span>
+</button>
+</div>
+</div></aside>
+<!-- Primary Content Area -->
+<div class="lg:col-span-8 space-y-section-gap">
+<!-- Hunting Prowess -->
+<section>
+<div class="flex items-center gap-4 mb-stack-md">
+<h2 class="font-headline-lg text-on-surface">Hunting Prowess</h2>
+<div class="h-px flex-1 bg-gradient-to-r from-teal-400/40 to-transparent"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-stack-md">
+<p class="font-body-md text-on-surface-variant">
+                            As a macro-predator, the Megalodon's diet consisted primarily of ancient cetaceans. Their hunting strategy involved immobilizing prey by biting off fins or tail flukes before delivering a crushing blow to the torso.
+                        </p>
+<ul class="space-y-2">
+<li class="flex items-center gap-3 text-sm text-teal-400">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                                High-speed burst pursuit capabilities
+                            </li>
+<li class="flex items-center gap-3 text-sm text-teal-400">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                                Specialized serrated teeth for flesh shearing
+                            </li>
+<li class="flex items-center gap-3 text-sm text-teal-400">
+<span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                                Global migration following whale movements
+                            </li>
+</ul>
+</div>
+<div class="rounded-xl overflow-hidden border border-teal-400/20 aspect-video relative group">
+<img class="w-full h-full object-cover" data-alt="Detailed concept illustration of a Megalodon hunting a primitive baleen whale in murky, deep blue prehistoric waters. The scene captures the sheer scale of the shark compared to its prey, with bubbles and silt kicked up by the movement. Luminescent teal light filters from the surface, casting long, wavering shadows across the ocean floor. The style is cinematic and realistic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb4UiQJKufqaSrQbY5hUIfifqO1moF6ru3gOGnZ-_c6S4DI07J6g_lKaX_ZFEhq_pYykK_2WX-MbyY7m8tK0vrb__Rjr8lok2dRPdtqyZrsv2lsF4LfHTjyCAe_D0CJGhjRH-NXREyHF0DH28OWph2ktFQPrUC-utj9FyVFa97-1HWzzJyRG_lvVpm-emHqHX3z1GvFtrAS2HpZJhgmvGlS6rjOJZgKB6lc54nTUE3DfHlyXzVOkphF9OHNM_pcbF4on1WL4q2QxE"/>
+<div class="absolute inset-0 bg-slate-900/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="material-symbols-outlined text-4xl text-teal-400" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Size Comparison Section -->
+<section class="glass-panel p-stack-lg rounded-2xl">
+<h2 class="font-headline-lg text-on-surface mb-stack-lg text-center">Magnitude Comparison</h2>
+<div class="relative w-full h-64 flex items-end justify-around gap-4 px-4 bg-slate-950/50 rounded-xl border border-teal-400/5 p-4 overflow-hidden">
+<!-- Background Grid -->
+<div class="absolute inset-0 grid grid-cols-6 grid-rows-4 opacity-10">
+<div class="border-r border-b border-teal-400"></div>
+<div class="border-r border-b border-teal-400"></div>
+<div class="border-r border-b border-teal-400"></div>
+<div class="border-r border-b border-teal-400"></div>
+<div class="border-r border-b border-teal-400"></div>
+<div class="border-b border-teal-400"></div>
+</div>
+<!-- Comparison Silhouettes -->
+<div class="flex flex-col items-center gap-2 group">
+<div class="h-6 w-1 bg-teal-400 rounded-full group-hover:shadow-[0_0_10px_#64ffda] transition-all"></div>
+<span class="font-label-md text-[10px] text-on-surface-variant">Human Diver (6ft)</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="h-20 w-8 bg-teal-400/40 rounded-t-full border border-teal-400/60 group-hover:bg-teal-400/60 transition-all"></div>
+<span class="font-label-md text-[10px] text-on-surface-variant">Great White (20ft)</span>
+</div>
+<div class="flex flex-col items-center gap-2 group">
+<div class="h-56 w-32 bg-teal-400 rounded-t-[100px] bioluminescent-glow group-hover:scale-105 transition-transform"></div>
+<span class="font-label-md text-[10px] text-teal-400 font-bold uppercase">Megalodon (60ft)</span>
+</div>
+</div>
+<p class="mt-stack-md text-center text-sm text-on-surface-variant">
+                    Visualizing the sheer scale of a 18-meter apex predator against modern marine life.
+                </p>
+</section>
+<!-- Prehistoric Gallery (Asymmetric) -->
+<section>
+<h2 class="font-headline-lg text-on-surface mb-stack-lg">Ancient World Gallery</h2>
+<div class="grid grid-cols-12 gap-4 h-[500px]">
+<div class="col-span-8 rounded-xl overflow-hidden border border-teal-400/20 group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Expansive digital landscape art of a prehistoric reef system teeming with strange ancient fish and vibrant, bioluminescent corals. The water is a deep, layered navy blue with shafts of emerald and teal light penetrating from a golden-hour sun above. The mood is serene yet vibrant, showcasing the rich biodiversity of the Miocene epoch. Minimalist yet detailed aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKxE8Y2nELM00yIrtEIWr0jrkvwX_zLA0T8DY__s_b4igyin4w_XJP8DymN82IDieIiEtcjiLDA_M88VQ0jmYn9iFbyvQdYZj-n2XGAkkClCnONWwk_6yKJIHjVFmo9v5zouOZgwqIkykfU5Hs-TbfCDCMWSgaTsCcFS9PZ6mPrNqvw6AnF20M9v0uJ6R2mf0T1bW7iM3Qz0aZapXts-oWC_vlmVqAQMq-Eiwh75HUhvxYfYfYmhWhNvIMit7cNxGgtwS_U1dzC5o"/>
+</div>
+<div class="col-span-4 flex flex-col gap-4">
+<div class="h-1/2 rounded-xl overflow-hidden border border-teal-400/20 group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Cinematic underwater shot of a deep sea trench with dark jagged rock formations and faint bioluminescent organisms glowing in cyan and purple. The scene is atmospheric and mysterious, representing the deep oceanic habitats where Megalodons might have patrolled. Dark navy blue tones dominate with sharp neon teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDyTA2iHjihO0Q-oPsUj7_7lY25DKQCwK-OKXQwrAxYaw_ZeXJUnMD5TSG0EfDRs8swWX1DQLRe_HQQUOVaoUxbJLSFDze127Y8lAGFUKfOu4lwCYeS5TlQyBm7XM61-klD19y___TfbWQqUckzxllSM7Pw2zxyiIY3twrcGIMd3bm2dCwNwRGEK53PXBg1dez0Hrvq7BZ629dmMB7vqrRH1RwkiDummGA7F39kyN39a4-SFLiD9rRWXUrhX62DcJnHWOCGZvQkcY"/>
+</div>
+<div class="h-1/2 rounded-xl overflow-hidden border border-teal-400/20 group">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="Conceptual artwork of prehistoric whale skeletons resting on the dark ocean floor, partially covered by sand and kelp. The lighting is low and moody, with a single beam of teal light illuminating the fossils. This visual storytelling piece connects the predator's legacy with the cycle of life in the ancient oceans." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByJx5YXGGBvhbigzYCWjdbBDtywd8DU9xUjX-a4EeHrDjBn_bh_Jo7cd-msx_RLJ37LZ-FoKOKIj-KIZ6Bw8sonD-s9gHJjYWRb5l4XqIDG-2gAE2_1y8rbag373OhSv2sISP9Cj3ttf-F9Uu5wWYuow9JjxoJvGXuchWmRQn0HuBpurh1pSvnFYLLhq8kjDrqFKh3P4Gp0tGwDXJIawVNEC_dewXiMbXalA2crciyXJmW1AEW1WCqDpASJ-V32XjaVye6VQgV13U"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Modern Connection -->
+<section class="p-stack-lg rounded-2xl bg-gradient-to-br from-teal-400/10 to-slate-900 border border-teal-400/20">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="flex-1">
+<h2 class="font-headline-lg text-teal-400 mb-stack-md">From Myth to Conservation</h2>
+<p class="font-body-md text-on-surface-variant mb-stack-md">
+                            The Megalodon may be extinct, but its legacy lives on in the Great White. Protecting today's apex predators is critical for maintaining the health of our global oceans. Without them, the delicate balance of the marine ecosystem collapses.
+                        </p>
+<button class="bg-transparent border-2 border-teal-400 text-teal-400 hover:bg-teal-400/10 px-6 py-2 rounded-lg font-bold transition-all">
+                            Save Our Sharks
+                        </button>
+</div>
+<div class="w-full md:w-64 aspect-square rounded-full overflow-hidden border-4 border-teal-400/30 bioluminescent-glow">
+<img class="w-full h-full object-cover" data-alt="A striking portrait of a modern Great White Shark gliding through clear, sun-dappled teal water. The shark's eye is visible, conveying a sense of intelligence and ancient power. The image is crisp and professional, utilizing a high-contrast palette of deep blues and bright teals to emphasize the shark's sleek, powerful form. A symbol of modern conservation efforts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByMa-shRhHI1L7ieKoy130Yb-U1N7CllUOMmHRKHsZTn0xA0v9j88EONvtoK4kammTUN63Lb4yJpyK4ifrnD8V3ypm5UNPUedpzprn42WE2WrwcTkmuNCOySa3E5r9IfUpgKTnH-NLOnec8lSGyJ2t3d5JNGSZalQBtB3mpoN1rnp300AkEw86kuj3LaSfJCze_EDsp96WWw1iBt4WqmLeWsMSsSGLd7Wg0uoeZsGLoogmdVJkV2KiNZzHnVBSRVejTpP3BA3RLIg"/>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-0 h-full z-40 h-full w-64 border-r border-teal-900/50 bg-slate-950/95 shadow-2xl pt-24">
+<div class="px-6 mb-stack-lg">
+<h2 class="text-teal-400 font-black font-plus-jakarta uppercase text-xs tracking-widest">Marine Database</h2>
+<p class="text-[10px] text-slate-500 uppercase tracking-tighter">Deep Sea Research Unit</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-slate-900 font-plus-jakarta font-medium transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-teal-200" data-icon="history_edu">history_edu</span>
+                Prehistoric Eras
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-teal-500/10 text-teal-400 border-l-4 border-teal-400 font-plus-jakarta font-medium transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="scuba_diving">scuba_diving</span>
+                Megalodon
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-slate-900 font-plus-jakarta font-medium transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-teal-200" data-icon="waves">waves</span>
+                Giant Squids
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-slate-900 font-plus-jakarta font-medium transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-teal-200" data-icon="sailing">sailing</span>
+                Ancient Whales
+            </a>
+<div class="pt-10">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-slate-900 font-plus-jakarta font-medium transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-teal-200" data-icon="settings">settings</span>
+                    Settings
+                </a>
+</div>
+</nav>
+</aside>
+<!-- BottomNavBar (Mobile Only) -->
+<footer class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-safe-offset-2 pt-2 bg-slate-900/90 backdrop-blur-xl rounded-t-2xl border-t border-teal-500/30 shadow-[0_-10px_25px_-5px_rgba(100,255,218,0.1)]">
+<div class="flex flex-col items-center justify-center text-slate-500 tap-highlight-none active:scale-90 transition-all hover:bg-slate-800/50 p-2">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-plus-jakarta text-[10px] font-semibold">Explore</span>
+</div>
+<div class="flex flex-col items-center justify-center text-teal-400 bg-teal-400/10 rounded-xl px-3 py-1 tap-highlight-none active:scale-90 transition-all hover:bg-slate-800/50">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+<span class="font-plus-jakarta text-[10px] font-semibold">Dossier</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 tap-highlight-none active:scale-90 transition-all hover:bg-slate-800/50 p-2">
+<span class="material-symbols-outlined" data-icon="water_drop">water_drop</span>
+<span class="font-plus-jakarta text-[10px] font-semibold">Habitats</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 tap-highlight-none active:scale-90 transition-all hover:bg-slate-800/50 p-2">
+<span class="material-symbols-outlined" data-icon="shiver">severe_cold</span>
+<span class="font-plus-jakarta text-[10px] font-semibold">Conservation</span>
+</div>
+</footer>
+<!-- Universal Spacer for Navbars -->
+<div class="h-20 lg:hidden"></div>
+</body></html>

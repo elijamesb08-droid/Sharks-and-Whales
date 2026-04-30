@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#d6e3ff",
+                    "tertiary-container": "#001e17",
+                    "outline-variant": "#44474d",
+                    "on-tertiary": "#00382d",
+                    "primary": "#b9c7e4",
+                    "error": "#ffb4ab",
+                    "primary-fixed-dim": "#b9c7e4",
+                    "surface-dim": "#121414",
+                    "secondary-fixed": "#d5e3ff",
+                    "on-primary-container": "#74829d",
+                    "surface-bright": "#37393a",
+                    "tertiary-fixed-dim": "#38debb",
+                    "on-secondary": "#1e314c",
+                    "on-tertiary-fixed-variant": "#005142",
+                    "surface-container": "#1e2020",
+                    "on-tertiary-fixed": "#002019",
+                    "on-secondary-fixed": "#071c36",
+                    "on-primary": "#233148",
+                    "on-background": "#e2e2e2",
+                    "on-error": "#690005",
+                    "secondary": "#b5c7ea",
+                    "surface-container-high": "#282a2b",
+                    "inverse-primary": "#515f78",
+                    "surface-container-low": "#1a1c1c",
+                    "error-container": "#93000a",
+                    "inverse-surface": "#e2e2e2",
+                    "tertiary": "#38debb",
+                    "surface-container-highest": "#333535",
+                    "outline": "#8f9097",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#354764",
+                    "tertiary-fixed": "#5ffbd6",
+                    "on-tertiary-container": "#00937a",
+                    "on-surface-variant": "#c5c6cd",
+                    "on-primary-fixed": "#0d1c32",
+                    "on-secondary-fixed-variant": "#354764",
+                    "primary-container": "#0a192f",
+                    "surface-tint": "#b9c7e4",
+                    "on-secondary-container": "#a3b6d8",
+                    "secondary-fixed-dim": "#b5c7ea",
+                    "background": "#121414",
+                    "surface": "#121414",
+                    "surface-container-lowest": "#0c0f0f",
+                    "surface-variant": "#333535",
+                    "on-primary-fixed-variant": "#39475f",
+                    "on-surface": "#e2e2e2",
+                    "inverse-on-surface": "#2f3131"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-edge": "32px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "section-gap": "80px",
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-xl": ["Plus Jakarta Sans"],
+                    "label-md": ["Inter"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #0a192f; color: #e2e2e2; }
+        .glass-card { background: rgba(23, 42, 69, 0.8); backdrop-filter: blur(12px); border-top: 1px solid rgba(100, 255, 218, 0.1); }
+        .bioluminescent-glow { text-shadow: 0 0 10px rgba(100, 255, 218, 0.5); }
+        .oceanic-gradient { background: radial-gradient(circle at center, #172a45 0%, #0a192f 100%); }
+    </style>
+</head>
+<body class="font-body-md oceanic-gradient min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 border-b border-[#64ffda]/20 bg-[#172a45]/80 backdrop-blur-xl shadow-2xl shadow-black/50">
+<div class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto font-['Plus_Jakarta_SANS'] text-sm tracking-wide">
+<div class="text-2xl font-bold tracking-tighter text-[#64ffda]">Abyssal Explorer</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_index.html">Home</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_sharks.html">Sharks</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_whales.html">Whales</a>
+<a class="text-[#64ffda] border-b-2 border-[#64ffda] pb-1 font-semibold" href="_conservation.html">Conservation</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_orca.html">Orcas</a>
+<a class="text-slate-300 hover:text-[#64ffda] transition-colors" href="_megalodon.html">Megalodon</a>
+
+
+</nav>
+<div class="flex items-center gap-6">
+<div class="hidden lg:block relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[#64ffda] scale-75">search</span>
+<input class="bg-[#0a192f] border border-[#172a45] rounded-full py-1.5 pl-10 pr-4 text-xs focus:outline-none focus:border-[#64ffda] transition-all w-48" placeholder="Search depths..." type="text"/>
+</div>
+<button class="bg-[#64ffda] text-[#0a192f] px-6 py-2 rounded-md font-bold hover:bg-[#64ffda]/90 active:scale-95 transition-all">Donate</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[716px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60" data-alt="A cinematic underwater shot of a majestic humpback whale swimming through deep navy blue water with rays of ethereal light filtering from the surface. The scene is vast and quiet, capturing the scale of the ocean with a bioluminescent teal glow highlighting the whale's textured skin. The atmosphere is mysterious and awe-inspiring, reinforcing the brand's scientific authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI3VScDSgLcIv9XkQ0Hr7nL6WbprAOTANZJ5ajATrLzlwbKyNCJd1-pLdEcoj4RXqKiyEGRO7nszFf5fh0-pbBJm2ZjpAAP2nmy7Aiz2CONx_BQbP9ENuZ26RRKkab_QMElTxhkSAPBXT4fRIMYi1T7Z1oJ5TfbO2PxU7dVqoIOetwwSiXPDuw2tdiYJ0GgazV0WNwkGyBWobZhHGaroiUKc9dfxI2qO96pV0ll8GOifWEmSdqHHHFfTMOp2mF1XwohbLuBpGaNLI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#0a192f] via-transparent to-[#0a192f]/50"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-8">
+<span class="font-label-md text-[#64ffda] tracking-[0.2em] uppercase mb-4 block">Our Oceans Are Calling</span>
+<h1 class="font-headline-xl text-on-background mb-6 bioluminescent-glow">Guardians of the Deep</h1>
+<p class="font-body-lg text-slate-300 mb-8 max-w-2xl mx-auto">Sharks and whales are the keystones of marine health. Today, they face unprecedented threats from our world above. We must act now to ensure their silence isn't permanent.</p>
+<div class="flex flex-wrap justify-center gap-4">
+<button class="bg-[#64ffda] text-[#0a192f] px-8 py-3 rounded-lg font-bold flex items-center gap-2 hover:shadow-[0_0_20px_rgba(100,255,218,0.4)] transition-all">
+                        Take Action Now
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-[#64ffda] text-[#64ffda] px-8 py-3 rounded-lg font-bold hover:bg-[#64ffda]/10 transition-all">Learn the Science</button>
+</div>
+</div>
+</section>
+<!-- Threat Bento Grid -->
+<section class="px-8 max-w-screen-2xl mx-auto py-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-on-background mb-4">Critical Threats</h2>
+<p class="font-body-md text-slate-400">The delicate balance of the deep sea is being disrupted by three primary human-driven forces. Understanding these threats is the first step toward mitigation.</p>
+</div>
+<div class="flex gap-4">
+<div class="glass-card p-4 rounded-xl flex items-center gap-4">
+<span class="text-4xl font-black text-[#64ffda] opacity-20">71%</span>
+<p class="text-[10px] leading-tight uppercase tracking-widest text-slate-400">Decline in Shark<br/>Populations since 1970</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-auto md:h-[600px]">
+<!-- Overfishing -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-2xl glass-card">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="A haunting image of industrial fishing nets floating in a dark, cold ocean environment. The lighting is moody and dramatic with deep teal shadows and a sense of entrapment. This visual emphasizes the threat of overfishing and habitat destruction, presented in a minimal and scientific aesthetic consistent with the Abyssal Explorer brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZEutofy4bxui324H2ICKQ0q1WjsXKs_hLTtyCDY8cGW-sCyT1vgmiwYUDFhLjcHGnOueiuy9NnFq8HRvTymRc6tW-PwTIZCA43oK4-o8zRmh3LUFJ13LfsgwcsgYbWUrcvnnt1SEgixiIvv-ev2Xa9Eqd_OhZfG_JZAcE_u-pL56Ny_D-Gn_3vXMTWdV0Yu2VXEnee9z1jA6IB6zc_CvXimxxVOs2XpDu-Z6WmJ-52H9yHOfbEmCi-Yr-VohaOAs9hviuchJqGIo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#172a45] via-transparent to-transparent"></div>
+<div class="relative h-full p-10 flex flex-col justify-end">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-[#64ffda]">phishing</span>
+<span class="font-label-md text-[#64ffda]">The Weight of Nets</span>
+</div>
+<h3 class="font-headline-md mb-3">Industrial Overfishing</h3>
+<p class="font-body-md text-slate-300 max-w-lg mb-6">Each year, millions of sharks are caught as bycatch. Whale migration paths are increasingly obstructed by ghost nets and deep-sea trawling equipment.</p>
+<a class="text-[#64ffda] flex items-center gap-2 font-bold group" href="#">
+                            Read the Research
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+</a>
+</div>
+</div>
+<!-- Climate Change -->
+<div class="relative group overflow-hidden rounded-2xl bg-secondary-container/30 border border-[#64ffda]/10">
+<div class="p-10 flex flex-col h-full">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-[#64ffda]">thermostat</span>
+<span class="font-label-md text-[#64ffda]">Rising Temperatures</span>
+</div>
+<h3 class="font-headline-md mb-4">Ocean Warming</h3>
+<p class="font-body-md text-slate-400 mb-8">Thermal shifts disrupt the primary production of phytoplankton, the foundation of the whale's food web, leading to widespread starvation.</p>
+<div class="mt-auto">
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs uppercase font-bold text-slate-500">Acidity Levels</span>
+<span class="text-[#64ffda] font-bold">26% Increase</span>
+</div>
+<div class="h-1 bg-[#172a45] rounded-full overflow-hidden">
+<div class="h-full bg-[#64ffda] w-[26%] shadow-[0_0_10px_#64ffda]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pollution -->
+<div class="md:col-span-3 relative group overflow-hidden rounded-2xl glass-card flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 p-10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-[#64ffda]">cleaning_services</span>
+<span class="font-label-md text-[#64ffda]">Toxins in the Abyss</span>
+</div>
+<h3 class="font-headline-md mb-4">Chemical &amp; Noise Pollution</h3>
+<p class="font-body-md text-slate-300">From microplastics found in shark stomachs to sonar testing that deafens whales, the invisible threats are often the most lethal. We are mapping these acoustic impacts in real-time.</p>
+</div>
+<div class="w-full md:w-1/2 h-64 md:h-full relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-50" data-alt="Microscopic view of neon blue microplastic particles illuminated by bioluminescent-style lighting. The aesthetic is scientific and high-contrast, showing the hidden pollution within deep sea environments. Deep navy background with vibrant teal accents that mimic the visual language of Abyssal Explorer." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXkofOAx84W7HOKcB90WL_m-DqDPg_Oy8-3QUqUQnFwUh4JKGHpxzDKzl_waU_naypDnetqFS_y-wnLrjCH5QMkcB2HGqFFJjuIBPFPaOz4xBXw0zbSeuYB8dSuC_EsQXw6UOpaCcehTrupq4LUgdaEkPODHxzCmH-k161sSoMw3knR6sMQkllNtK3SODhjACKjeijEuDU9ixEW56jYkbRT8tZbWRfOOiYd48EuxI36vwjOqMmR0uZwnc4Wn4Bot7ntxLvrPYh_rc"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Partners Section -->
+<section class="bg-surface-container-lowest py-20 border-y border-[#172a45]">
+<div class="px-8 max-w-screen-2xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-md mb-4">Our Research Partners</h2>
+<p class="font-body-md text-slate-500 max-w-xl mx-auto">Collaboration is the engine of conservation. We work with the world's leading marine laboratories to drive policy change.</p>
+</div>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 hover:opacity-100 transition-opacity">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">waves</span>
+<span class="font-headline-md tracking-tighter">DeepLab</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">water_drop</span>
+<span class="font-headline-md tracking-tighter">OceanicTrust</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">sailing</span>
+<span class="font-headline-md tracking-tighter">VanguardRes</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-4xl">public</span>
+<span class="font-headline-md tracking-tighter">BluePlanet</span>
+</div>
+</div>
+</div>
+</section>
+<!-- How You Can Help -->
+<section class="px-8 max-w-screen-2xl mx-auto py-24">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg mb-8">How You Can Help</h2>
+<p class="font-body-lg text-slate-300 mb-10">Conservation doesn't happen in isolation. Your support funds critical expeditions, satellite tagging programs, and legal battles against illegal whaling.</p>
+<div class="space-y-6 mb-12">
+<div class="flex items-start gap-4">
+<div class="bg-[#64ffda]/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-[#64ffda]" data-weight="fill">volunteer_activism</span>
+</div>
+<div>
+<h4 class="font-headline-md text-sm mb-1 uppercase tracking-wider">Fund a Satellite Tag</h4>
+<p class="text-slate-400 text-sm">Monitor a whale shark's journey across the Pacific in real-time.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-[#64ffda]/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-[#64ffda]" data-weight="fill">campaign</span>
+</div>
+<div>
+<h4 class="font-headline-md text-sm mb-1 uppercase tracking-wider">Advocacy Support</h4>
+<p class="text-slate-400 text-sm">Join our network of activists pressuring governments for marine sanctuaries.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-10 rounded-3xl border border-[#64ffda]/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-[#64ffda]/10 blur-3xl rounded-full"></div>
+<h3 class="font-headline-md mb-2">Support the Abyss</h3>
+<p class="text-slate-400 mb-8">Every contribution drives us closer to a sustainable ocean.</p>
+<div class="grid grid-cols-3 gap-4 mb-8">
+<button class="bg-[#0a192f] border border-[#172a45] hover:border-[#64ffda] py-4 rounded-xl font-bold transition-all">$25</button>
+<button class="bg-[#64ffda] text-[#0a192f] py-4 rounded-xl font-bold shadow-[0_0_20px_rgba(100,255,218,0.2)]">$50</button>
+<button class="bg-[#0a192f] border border-[#172a45] hover:border-[#64ffda] py-4 rounded-xl font-bold transition-all">$100</button>
+</div>
+<div class="mb-8">
+<label class="block text-xs uppercase tracking-widest text-slate-500 mb-2">Custom Amount</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">$</span>
+<input class="w-full bg-[#0a192f] border border-[#172a45] rounded-xl py-4 pl-8 pr-4 focus:outline-none focus:border-[#64ffda]" placeholder="Enter amount" type="number"/>
+</div>
+</div>
+<button class="w-full bg-[#64ffda] text-[#0a192f] py-4 rounded-xl font-black uppercase tracking-widest hover:bg-[#64ffda]/90 transition-all">Complete Donation</button>
+<p class="text-[10px] text-center text-slate-500 mt-4 px-8">Abyssal Explorer is a registered 501(c)(3) non-profit. All donations are tax-deductible.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#172a45] pt-12 pb-8 bg-[#0a192f]">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 gap-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-black text-[#64ffda]">Abyssal Explorer</div>
+<div class="font-['Plus_Jakarta_SANS'] text-xs uppercase tracking-widest text-slate-500">© 2024 Abyssal Explorer. Protecting our blue planet.</div>
+</div>
+<div class="flex gap-8">
+<a class="font-['Plus_Jakarta_SANS'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#64ffda] transition-colors" href="#">About Us</a>
+<a class="font-['Plus_Jakarta_SANS'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#64ffda] transition-colors" href="#">Research Partners</a>
+<a class="font-['Plus_Jakarta_SANS'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#64ffda] transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Plus_Jakarta_SANS'] text-xs uppercase tracking-widest text-slate-500 hover:text-[#64ffda] transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex gap-4">
+<a class="text-[#64ffda] hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-[#64ffda] hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
